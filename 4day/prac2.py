@@ -23,6 +23,30 @@ print(q[0])
 # pop() -> q: [m]
 # empty() -> q:[m] => q.length == 1 ? return False : return True
 
+class MyQueue:
+
+    def __init__(self):
+        self.input = []
+        self.output = []
+
+    def push(self, x: int) -> None:
+        self.input.append(x) # input = [x]
+        return self.input
+    
+    def pop(self) -> int:
+        for _ in range(len(self.input)-1):
+            self.input.pop()
+        self.output.append(self.input[0])
+        return self.output[0]
+
+    def peek(self) -> int:
+        return self.input[0]
+
+    def empty(self) -> bool:
+        return len(self.input) == 0
+
+###################################################################
+
 class MyQueue1:
     def __init__(self): # 큐를 구성한 list 생성
         self.input = []
@@ -39,4 +63,31 @@ class MyQueue1:
 
     def empty(self) -> bool:
         return len(self.input) == 0
+
+
+##########################################
+
+from collections import deque
+
+x = int(input())
+
+for _ in range(x):
+    n, m = map(int, input().split()) # 문서 개수, 궁금한 문서 idx (6, 0)
+    prior = deque(list(map(int, input().split()))) # 중요도 [1, 1, 9, 1, 1, 1]
+    array = deque([i for i in range(1, n + 1)])         # [1, 2, 3, 4, 5, 6]
+    array[m] = 0
+    ans = 0
+
+    while True:
+        if prior[0] != max(prior):
+            prior.append(prior.popleft())
+            array.append(array.popleft())
+        elif prior[0] == max(prior) and array[0] != 0:
+            prior.popleft()
+            array.popleft()
+            ans += 1
+        elif prior[0] == max(prior) and array[0] == 0:
+            ans += 1
+            print(ans)
+            break
 
