@@ -11,19 +11,19 @@ for i in range(a): # 들어가는 괄호수만큼
         print("NO")
     
     else: # 첫번째 값이 "("이면
-      if s[0] != s[-1] : # 만약 스택 첫번째 마지막값이 다를때 (첫번째 값은 "(")이거여야함
-          if s[i] == "(" : # 스택안에 i번째가 "("이면 +1
-              sum += 1
-          else : # 아니면 -1
-              sum -= 1
-          if sum < 0:
-            break
-      else :  
-          print("NO")
-      if sum == 0: # 마지막 더하고 0일경우
-          print("YES")
-      else :
-          print("NO")
+        if s[0] != s[-1] : # 만약 스택 첫번째 마지막값이 다를때 (첫번째 값은 "(")이거여야함
+            if s[i] == "(" : # 스택안에 i번째가 "("이면 +1
+                sum += 1
+            else : # 아니면 -1
+                sum -= 1
+            if sum < 0:
+                break
+        else :  
+            print("NO")
+        if sum == 0: # 마지막 더하고 0일경우
+            print("YES")
+        else :
+            print("NO")
 
 
 ######################################
