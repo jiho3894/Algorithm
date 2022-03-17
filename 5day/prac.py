@@ -8,7 +8,7 @@ class Solution:
         word = set() #set함수 사용
         l = 0 #길이의 위치를 찾기위한 index
         r = 0 # result
-        for i in range(8): #s에 들어간 string의 값의 길이만큼 for문 실행 ex)0~7번 8번
+        for i in range(len(s)): #s에 들어간 string의 값의 길이만큼 for문 실행 ex)0~7번 8번
             while s[i] in word: # word내부의 해당 s[i]의 값이 존재하면 => 중복된값이 있을경우 while문 돌아감 ex)a 가 word에 있는가
                 word.remove(s[l]) 
                 l += 1 
