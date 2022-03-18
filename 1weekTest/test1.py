@@ -16,7 +16,7 @@ def solution(progresses, speeds):
     answer.append(c)
     return answer
 
-### 위문제는 시간 오류###
+### 시간상의 문제 (코드는 돌아감)###
 ##########################################
 ### 시간 해결 ###
 
