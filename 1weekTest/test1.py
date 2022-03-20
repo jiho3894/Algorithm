@@ -19,8 +19,6 @@ def solution(progresses, speeds):
 ### 시간상의 문제 (코드는 돌아감)###
 ##########################################
 ### 시간 해결 ###
-
-
 def solution(progresses, speeds):
     answer = []  # return 값
     time = 0  # n일간의 작업 시간
@@ -31,7 +29,6 @@ def solution(progresses, speeds):
             progresses.pop(0)  # p=[30,55]
             speeds.pop(0)  # s=[30,5]
             count += 1
-
         else:
             if count > 0:
                 answer.append(count)

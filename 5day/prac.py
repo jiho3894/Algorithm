@@ -1,8 +1,6 @@
 ####################################
 # 중복 문자가 없는 가장 긴 부분 문자열
 # 앞자리부터 하나씩 검사해서 중복되지않는 값의 최대 길이를 찾아내는 문제 (연속으로 이어져야함)
-
-
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int: #ex)"a b c a b c b b"
         word = set() #set함수 사용
@@ -16,13 +14,9 @@ class Solution:
             r = max(r, i - l + 1) #ex) 7 - 5 + 1 = 3
         return r
 
-
 import sys
-
 input = sys.stdin.readline()
-
 n, m = map(int, input.split())
-
 data = {}
 
 for _ in range(n):

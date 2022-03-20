@@ -26,7 +26,6 @@ class LinkedList:
         cur.next = l1 or l2 # 그리고 그 다음값중에 l1 l2에 남아 있는 값을 밀어 넣어주기
         return node.next 
 
-
 li1 = [1, 2, 3]
 li2 = [2, 3, 4]
 li = LinkedList()

@@ -22,7 +22,24 @@ print(q[0])
 # peek() -> q: [n,m] ? return n
 # pop() -> q: [m]
 # empty() -> q:[m] => q.length == 1 ? return False : return True
+class MyQueue:
+    def __init__(self): # 큐를 구성한 list 생성
+        self.input = []
 
+    def push(self, x: int) -> None: 
+        self.input.append(x) # input = [x]
+        return self.input
+    
+    def pop(self) -> int: # 큐는 FIFO 구조이기때문에 가장 먼저간 값이 나가야함
+        return self.input.pop(0)  
+
+    def peek(self) -> int: # list의 가장 첫번째 값을 return
+        return self.input[0]
+
+    def empty(self) -> bool:
+        return len(self.input) == 0
+
+###################################################################
 class MyQueue:
 
     def __init__(self):
@@ -45,24 +62,8 @@ class MyQueue:
     def empty(self) -> bool:
         return len(self.input) == 0
 
-###################################################################
 
-class MyQueue1:
-    def __init__(self): # 큐를 구성한 list 생성
-        self.input = []
 
-    def push(self, x: int) -> None: 
-        self.input.append(x) # input = [x]
-        return self.input
-    
-    def pop(self) -> int: # 큐는 FIFO 구조이기때문에 가장 먼저간 값이 나가야함
-        return self.input.pop(0)  
-
-    def peek(self) -> int: # list의 가장 첫번째 값을 return
-        return self.input[0]
-
-    def empty(self) -> bool:
-        return len(self.input) == 0
 
 
 ##########################################
