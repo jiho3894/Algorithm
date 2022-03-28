@@ -1,5 +1,12 @@
-root = [1,2,None]
+a = int(input())
+stack = []
 
-print(len(root))
-
+for i in range(a):
+    num = int(input())
+    if num == 0:
+        stack.pop()
+    else:
+        stack.append(num)
+    
+print(sum(stack))
 
